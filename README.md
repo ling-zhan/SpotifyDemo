@@ -36,7 +36,7 @@
         }
       ```
   - Firestore Database 設置
-    - 創建 Songs 兩個資料表
+    - 創建 Songs 資料表
     - Songs 資料表
       - title: String
       - artist: String
