@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="SigninTitleCell" customModule="SpotifyUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZw-Q3-fg2">
+                        <rect key="frame" x="20" y="30" width="280" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="sVh-ZD-vKl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                        <color key="textColor" name="sign_title"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEI-q3-IZb">
+                        <rect key="frame" x="139.33333333333334" y="93" width="41.333333333333343" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="fcs-ix-pXD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BEI-q3-IZb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JZb-3p-5un"/>
+                    <constraint firstItem="PZw-Q3-fg2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="OpQ-P8-6fB"/>
+                    <constraint firstAttribute="bottom" secondItem="BEI-q3-IZb" secondAttribute="bottom" constant="38" id="SEp-9R-15E"/>
+                    <constraint firstAttribute="trailing" secondItem="PZw-Q3-fg2" secondAttribute="trailing" constant="20" id="mUj-NO-LRD"/>
+                    <constraint firstItem="BEI-q3-IZb" firstAttribute="top" secondItem="PZw-Q3-fg2" secondAttribute="bottom" constant="22" id="sYA-fz-xgk"/>
+                    <constraint firstItem="PZw-Q3-fg2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="u2U-aK-Yhe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="noteLabel" destination="BEI-q3-IZb" id="hcc-RG-uKC"/>
+            </connections>
+            <point key="canvasLocation" x="127" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="sign_title">
+            <color red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

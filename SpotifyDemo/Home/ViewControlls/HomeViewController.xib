@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="SpotifyUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="vRv-aU-Dpy" id="3Je-bx-m5o"/>
+                <outlet property="navigationBar" destination="Og6-pi-YpF" id="TTd-A8-tZG"/>
+                <outlet property="navigationBarTopConstraint" destination="uMm-Sc-c7T" id="bAR-ah-O2b"/>
+                <outlet property="tableView" destination="fJY-RU-yPV" id="j3A-gh-YH5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fJY-RU-yPV">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Og6-pi-YpF" customClass="NavigationBar" customModule="SpotifyUIKit" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="54" width="393" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="1YH-w9-cMi"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="navIcon" value="spotify_logo"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-aU-Dpy">
+                    <rect key="frame" x="186" y="416" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fJY-RU-yPV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7se-UN-JUn"/>
+                <constraint firstAttribute="bottom" secondItem="fJY-RU-yPV" secondAttribute="bottom" id="C6v-qe-HK1"/>
+                <constraint firstAttribute="trailing" secondItem="Og6-pi-YpF" secondAttribute="trailing" id="eCS-0P-0bT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fJY-RU-yPV" secondAttribute="trailing" id="gK7-D7-vWy"/>
+                <constraint firstItem="Og6-pi-YpF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nyb-NO-yEO"/>
+                <constraint firstItem="Og6-pi-YpF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="uMm-Sc-c7T"/>
+                <constraint firstItem="fJY-RU-yPV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yPD-Wg-fuw"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="spotify_logo" width="196" height="59"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

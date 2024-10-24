@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="PlaylistCell" customModule="SpotifyUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dHJ-d6-Ldj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="240" id="e5V-n5-YLd"/>
+                        </constraints>
+                    </tableView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="KKs-1a-ayC">
+                        <rect key="frame" x="141.66666666666666" y="101.66666666666667" width="37" height="37.000000000000014"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="dHJ-d6-Ldj" secondAttribute="trailing" id="909-OF-lAs"/>
+                    <constraint firstAttribute="bottom" secondItem="dHJ-d6-Ldj" secondAttribute="bottom" id="LKp-A6-mBw"/>
+                    <constraint firstItem="dHJ-d6-Ldj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YKN-X1-4cD"/>
+                    <constraint firstItem="KKs-1a-ayC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fDL-qa-zwP"/>
+                    <constraint firstItem="KKs-1a-ayC" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="q3w-fj-NgE"/>
+                    <constraint firstItem="dHJ-d6-Ldj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vPm-VR-hBv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="activityIndicator" destination="KKs-1a-ayC" id="Udn-0D-5jx"/>
+                <outlet property="tableView" destination="dHJ-d6-Ldj" id="tkR-S4-kVm"/>
+            </connections>
+            <point key="canvasLocation" x="93" y="21"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TabBarCollectionCell" customModule="SpotifyUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNk-vO-fu6">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db6-Ig-rXe">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="c5g-Gv-oyZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcL-Dp-BbR">
+                                <rect key="frame" x="25" y="27" width="30" height="3"/>
+                                <color key="backgroundColor" name="home_tabbar_line"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="qsV-0Y-YDn"/>
+                                    <constraint firstAttribute="width" constant="30" id="veG-qv-Z1X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="db6-Ig-rXe" firstAttribute="leading" secondItem="wNk-vO-fu6" secondAttribute="leading" id="2AH-FG-ZkZ"/>
+                            <constraint firstAttribute="trailing" secondItem="db6-Ig-rXe" secondAttribute="trailing" id="GH3-LI-LcL"/>
+                            <constraint firstItem="HcL-Dp-BbR" firstAttribute="centerX" secondItem="wNk-vO-fu6" secondAttribute="centerX" id="LYa-E4-Htf"/>
+                            <constraint firstAttribute="height" constant="30" id="mWc-ZH-bZZ"/>
+                            <constraint firstItem="db6-Ig-rXe" firstAttribute="top" secondItem="wNk-vO-fu6" secondAttribute="top" id="pep-F2-cYM"/>
+                            <constraint firstItem="HcL-Dp-BbR" firstAttribute="top" secondItem="db6-Ig-rXe" secondAttribute="bottom" id="qk2-Rk-7U3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wNk-vO-fu6" secondAttribute="trailing" id="P4L-dk-dtY"/>
+                <constraint firstItem="wNk-vO-fu6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jpv-cj-zde"/>
+                <constraint firstItem="wNk-vO-fu6" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="pt9-PW-2SL"/>
+            </constraints>
+            <size key="customSize" width="82" height="30"/>
+            <connections>
+                <outlet property="indicatorView" destination="HcL-Dp-BbR" id="sfv-HS-NJU"/>
+                <outlet property="titleLabel" destination="db6-Ig-rXe" id="tTS-cv-7yx"/>
+            </connections>
+            <point key="canvasLocation" x="116.03053435114504" y="20.422535211267608"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="home_tabbar_line">
+            <color red="0.25900000333786011" green="0.7839999794960022" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

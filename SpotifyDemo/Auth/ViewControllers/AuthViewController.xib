@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="SpotifyUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationBar" destination="8Uj-XZ-lYk" id="whs-V6-Elb"/>
+                <outlet property="navigationBarTopConstraint" destination="HQB-p5-FqG" id="VNy-wE-rrd"/>
+                <outlet property="registerButton" destination="N7W-Sq-j4c" id="sqH-ah-O76"/>
+                <outlet property="signinButton" destination="NPM-C3-s0I" id="58x-Gd-fO9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auth_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Xy3-QJ-N9r">
+                    <rect key="frame" x="0.0" y="419" width="365" height="433"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_pattern" translatesAutoresizingMaskIntoConstraints="NO" id="r1G-iW-VWm">
+                    <rect key="frame" x="226" y="0.0" width="167" height="129"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uj-XZ-lYk" customClass="NavigationBar" customModule="SpotifyUIKit" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="8OP-SK-x1d"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="navIcon" value="spotify_logo"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isShowLogo" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify_logo" translatesAutoresizingMaskIntoConstraints="NO" id="nky-cD-MTM">
+                    <rect key="frame" x="98.666666666666686" y="234" width="196" height="59"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy Listening To Music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuh-LO-2n0">
+                    <rect key="frame" x="33" y="348" width="327" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="NAY-Et-BWk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                    <color key="textColor" name="auth_title"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotify is a proprietary Swedish audio streaming and media services provider " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8t-u3-Ban">
+                    <rect key="frame" x="33" y="404" width="327" height="40.666666666666686"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="46" id="PCG-20-8pg"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="xhE-fo-mkN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="auth_content"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="G88-uj-u1V">
+                    <rect key="frame" x="30" y="474.66666666666669" width="333" height="73.000000000000057"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7W-Sq-j4c">
+                            <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="73"/>
+                            <color key="backgroundColor" name="app_green_btn_background"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Register">
+                                <color key="titleColor" name="app_green_btn_text"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapRegisterButton:" destination="-1" eventType="touchUpInside" id="Zsd-S7-yov"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-C3-s0I">
+                            <rect key="frame" x="186.66666666666663" y="0.0" width="146.33333333333337" height="73"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Sign in">
+                                <color key="titleColor" name="auth_signin"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapSigninButton:" destination="-1" eventType="touchUpInside" id="ngd-Q3-WUJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="73" id="826-19-iBs"/>
+                    </constraints>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom_pattern" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-OO-20Y">
+                    <rect key="frame" x="236" y="551" width="157" height="301"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="K8t-u3-Ban" firstAttribute="top" secondItem="vuh-LO-2n0" secondAttribute="bottom" constant="21" id="4Sa-pj-jSG"/>
+                <constraint firstAttribute="trailing" secondItem="K8t-u3-Ban" secondAttribute="trailing" constant="33" id="64C-9r-Uty"/>
+                <constraint firstItem="G88-uj-u1V" firstAttribute="top" secondItem="K8t-u3-Ban" secondAttribute="bottom" constant="30" id="Bne-hD-lSM"/>
+                <constraint firstItem="8Uj-XZ-lYk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HQB-p5-FqG"/>
+                <constraint firstAttribute="bottom" secondItem="Xy3-QJ-N9r" secondAttribute="bottom" id="K2a-NT-wqQ"/>
+                <constraint firstItem="nky-cD-MTM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PM6-YE-VWn"/>
+                <constraint firstItem="r1G-iW-VWm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Riq-LB-s0a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Uj-XZ-lYk" secondAttribute="trailing" id="UyU-Nb-7Yt"/>
+                <constraint firstAttribute="trailing" secondItem="mxg-OO-20Y" secondAttribute="trailing" id="V8Y-IX-5sg"/>
+                <constraint firstItem="vuh-LO-2n0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="Vka-Oz-6Mp"/>
+                <constraint firstItem="nky-cD-MTM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="175" id="bHf-XT-Iv5"/>
+                <constraint firstAttribute="bottom" secondItem="mxg-OO-20Y" secondAttribute="bottom" id="cLz-Tr-bFl"/>
+                <constraint firstItem="vuh-LO-2n0" firstAttribute="top" secondItem="nky-cD-MTM" secondAttribute="bottom" constant="55" id="drP-6D-9rl"/>
+                <constraint firstItem="Xy3-QJ-N9r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eG2-lT-HDu"/>
+                <constraint firstAttribute="trailing" secondItem="r1G-iW-VWm" secondAttribute="trailing" id="gqY-dV-Zg5"/>
+                <constraint firstItem="K8t-u3-Ban" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="khH-fr-fdz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G88-uj-u1V" secondAttribute="trailing" constant="30" id="uqT-9G-Ay2"/>
+                <constraint firstItem="G88-uj-u1V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="xoe-0T-Y7Q"/>
+                <constraint firstItem="8Uj-XZ-lYk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yCF-Nw-KJB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vuh-LO-2n0" secondAttribute="trailing" constant="33" id="yHM-vg-fkt"/>
+            </constraints>
+            <point key="canvasLocation" x="84.732824427480907" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="auth_bg" width="365" height="433"/>
+        <image name="bottom_pattern" width="157" height="301"/>
+        <image name="spotify_logo" width="196" height="59"/>
+        <image name="top_pattern" width="167" height="129"/>
+        <namedColor name="app_green_btn_background">
+            <color red="0.25900000333786011" green="0.7839999794960022" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="app_green_btn_text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="auth_content">
+            <color red="0.47499999403953552" green="0.47499999403953552" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="auth_signin">
+            <color red="0.19200000166893005" green="0.19200000166893005" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="auth_title">
+            <color red="0.2199999988079071" green="0.2199999988079071" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
