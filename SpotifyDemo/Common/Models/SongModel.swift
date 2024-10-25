@@ -14,14 +14,14 @@ struct SongModel: Codable, Hashable {
     var releaseDate: Date?
     var songId: String?
     
-    /// 組合圖片網址
+    /// 組合圖片網址(預設網址連結請參考AppURL.swlft)
     func getArtistUrl() -> URL? {
         let appURL = AppURL.shared
         let urlString = "\(appURL.coverFirestorage)\(artist ?? "")-\(title ?? "").jpg?\(appURL.mediaAlt)"
         return URL(string: urlString)
     }
     
-    /// 組合歌曲網址
+    /// 組合歌曲網址(預設網址連結請參考AppURL.swlft)
     func getSongUrl() -> URL? {
         let appURL = AppURL.shared
         let urlString = "\(appURL.songFirestorage)\(artist ?? "")-\(title ?? "").mp3?\(appURL.mediaAlt)"

@@ -25,6 +25,15 @@
   
       ![avatar](/overviewImage/firestore_storage_settings.png)
 
+
+    - 音樂圖片命名格式 [歌手-歌曲.jpg]，如下圖所示
+
+      ![avatar](/overviewImage/firestore_storage_song_image_format.png)
+
+    - 音樂命名格式 [歌手-歌曲.mp3]，如下圖所示
+
+      ![avatar](/overviewImage/firestore_storage_song_format.png)
+
     - 將檔案設置可讀，規則設置如下
   
       ```
@@ -40,14 +49,40 @@
   - Firestore Database 設置
     - 創建 Songs 資料表
     - Songs 資料表
-      - title: String
-      - artist: String
-      - duration: number
-      - releaseDate: timestamp
+      - title: String(歌曲)
+      - artist: String(歌手)
+      - duration: number(歌曲長度)
+      - releaseDate: timestamp(發布日期)
     - 並自行建立音樂資料，如下圖
 
       ![avatar](/overviewImage/firestore_database_data.png)
     
+### 變更程式碼內容(對應至 Firebase Storage 歌曲圖片及歌曲檔案的取得網址)
+
+  - 請變更 Common/Shared/AppURL.swift 檔案裡面的 coverFirestorage 與 songFirestorage 變數。對應 firebase storage 圖片及歌曲的連結網址。
+    ```
+    // firebase 歌曲圖片路徑
+    let coverFirestorage: String = "https://firebasestorage.googleapis.com/v0/b/fir-storage-684d1.appspot.com/o/covers%2F"
+        
+     // firebase 歌曲路徑
+    let songFirestorage: String = "https://firebasestorage.googleapis.com/v0/b/fir-storage-684d1.appspot.com/o/songs%2F"
+    ```
+  - 若要更改 firebase storage 圖片及歌曲的命名格式，請至 Common/Models/SongModel.Swift 修改 getArtistUrl() 及 getSongUrl() 這兩個方法，對應 firebase storage 圖片及歌曲的命名格式
+    ```
+    /// 組合圖片網址(預設網址連結請參考AppURL.swlft)
+    func getArtistUrl() -> URL? {
+        let appURL = AppURL.shared
+        let urlString = "\(appURL.coverFirestorage)\(artist ?? "")-\(title ?? "").jpg?\(appURL.mediaAlt)"
+        return URL(string: urlString)
+    }
+    
+    /// 組合歌曲網址(預設網址連結請參考AppURL.swlft)
+    func getSongUrl() -> URL? {
+        let appURL = AppURL.shared
+        let urlString = "\(appURL.songFirestorage)\(artist ?? "")-\(title ?? "").mp3?\(appURL.mediaAlt)"
+        return URL(string: urlString)
+    }
+    ```
 
 ### 版本要求
   -  Xcode 16 以上
