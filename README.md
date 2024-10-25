@@ -4,6 +4,7 @@
 參考自 `Flutter Guys` 的 `YouTube` 影片，此專案將 `Flutter` 改編為 Swift 程式語言。
 
 為不侵權，專案僅提供 App 語法學習之使用，其相關 Firebase 服務設置與音樂檔案，請自行創建與取得。
+
 !! 在專案執行前，須將覆蓋專案內的 `GoogleService-Info.plist` 檔案。
 
 ![avatar](/overviewImage/overview.png)
