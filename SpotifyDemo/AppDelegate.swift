@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.toIntroViewController()
-//        self.toTestViewController()
-//        self.toHomeViewController()
         self.setAppModelType(isDark: nil)
         return true
     }

@@ -14,8 +14,8 @@ protocol SigninViewModelDelegate: AnyObject {
 }
 
 class SigninViewModel {
-    var email: String = "testbody@123.com"
-    var password: String = "testbody"
+    var email: String = ""
+    var password: String = ""
     
     weak var delegate: SigninViewModelDelegate?
 
@@ -43,14 +43,6 @@ extension SigninViewModel {
             }
         }
     }
-    
-//    func signout() {
-//        do {
-//            try Auth.auth().signOut()
-//        } catch {
-//            print("Error signing out: \(error.localizedDescription)")
-//        }
-//    }
 }
 
 /// 驗證資料
